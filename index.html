@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="download.png" type="image/x-icon">
+    <title>Tasty Bite Restaurant</title>
+
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+            font-family: sans-serif;
+        }
+
+        /* <!-- HEADER SECTION --> */
+        header{
+            background: #8b0000;
+            text-align: center;
+            color: #fff;
+            padding: 15px;
+        }
+
+        /* <!-- NAV SECTION --> */
+        nav{
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            background: #a52a29;
+            padding: 10px;
+        }
+
+        nav > a{
+            text-decoration: none;
+            color: #fff;
+        }
+
+        /* <!-- HERO SECTION --> */
+        .hero{
+            text-align: center;
+            padding: 60px 20px;
+            background: #ff6347;
+            color: #fff;
+        }
+
+        /* <!-- MAIN SECTION --> */
+        .special{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            padding: 40px 20px;
+        }
+
+        .dish{
+            background: #fff8dc;
+            padding: 20px;
+            width: 220px;
+            border-radius: 8px;
+            text-align: center;
+        }
+
+        .foodpic{
+            width: 200px;
+            height: 120px;
+            border-radius: 10px;
+            border: 2px solid black;
+            margin: 5px;
+        }
+
+        /* <!-- FOOTER SECTION --> */
+        footer{
+            text-align: center;
+            background: #8b0000;
+            color: #fff;
+            padding: 15px;
+            margin-top: 20px;
+        }
+
+        /* RESPONSIVE BLOCK */
+        @media(max-width: 600px){
+            nav{
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .special{
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .dish{
+                width: 90%;
+            }
+
+            .foodpic{
+                width: 90%;
+                height: 90%;
+            }
+        }
+
+
+
+    </style>
+
+</head>
+<body>
+
+    <!-- HEADER SECTION -->
+    <header>
+        <h1>Tasty Bite Restaurant</h1>
+    </header>
+
+    <!-- NAV SECTION -->
+     <nav>
+        <a href="">Home</a>
+        <a href="">Menu</a>
+        <a href="">Contact</a>
+     </nav>
+
+     <!-- HERO SECTION -->
+      <div class="hero">
+        <h2>Delicious Food Delivered Fresh</h2>
+        <p>. Italian Food . Indian Food . Chinese Food</p>
+      </div>
+
+      <!-- MAIN SECTION -->
+       <section class="special">
+
+        <div class="dish">
+            <img class="foodpic" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRAx4gXqtonxIIvOoDUlkz2O7N8zFKbIjsj_Q&s" alt="Pizza">
+            <h3>Pizza</h3>
+            <p>Cheesy and Fresh</p>
+        </div>
+
+        <div class="dish">
+            <img class="foodpic" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQGrbdqkal9DYzKRvLm9TUihH5WDwW5flkDfg&s" alt="Burger">
+            <h3>Burger</h3>
+            <p>Juicy and Testy</p>
+        </div>
+
+        <div class="dish">
+            <img class="foodpic" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSnn4GQz1ZYVPr3XRMdOeHaC87-Cbm1BnPV9sSqJfwBaQ&s" alt="Pasta">
+            <h3>Pasta</h3>
+            <p>Authentic Italian</p>
+        </div>
+
+       </section>
+
+       <section class="special">
+
+        <div class="dish">
+            <img class="foodpic" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSnn4GQz1ZYVPr3XRMdOeHaC87-Cbm1BnPV9sSqJfwBaQ&s" alt="Sandwich">
+            <h3>Sandwich</h3>
+            <p>Fresh & grilled</p>
+        </div>
+
+        <div class="dish">
+            <img class="foodpic" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSBLv7WArNGBTs5fvBBEksJ0XGjzzsCikfx8w&s" alt="French Fries">
+            <h3>French Fries</h3>
+            <p>Crispy potato sticks</p>
+        </div>
+
+        <div class="dish">
+            <img class="foodpic" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTbQcWDlkKPMPRkERqnMjJeEqRbFzfYHNnBIVZVnSzaRg&s" alt="Roll">
+            <h3>Roll</h3>
+            <p>Stuffed & wrapped</p>
+        </div>
+
+       </section>
+
+       <section class="special">
+
+        <div class="dish">
+            <img class="foodpic" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRUAzDdNR32jR4qfFIjpuATDRWVfFH3JnwLGA&s" alt="Tacos">
+            <h3>Tacos</h3>
+            <p>Mexican street bite</p>
+        </div>
+
+        <div class="dish">
+            <img class="foodpic" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTjduWHfRQGPncAlhTBEQeS5YzJL_aTXovVNQ&s" alt="Fried Chicken">
+            <h3>Fried Chicken</h3>
+            <p>Crunchy outside, juicy inside</p>
+        </div>
+
+        <div class="dish">
+            <img class="foodpic" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRy6yUrfph6HZkkfwWwvFocczlDyCZuB82B0g&s" alt="Noodles">
+            <h3>Noodles</h3>
+            <p>Street style flavor</p>
+        </div>
+
+       </section>
+
+       <!-- FOOTER SECTION -->
+        <footer>
+            &copy; 2024 Tasty Bite Restaurant. All rights reserved | Contact - 7488426912.
+        </footer>
+</body>
+</html>
