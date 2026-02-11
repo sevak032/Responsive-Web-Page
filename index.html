@@ -1,199 +1,212 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="download.png" type="image/x-icon">
-    <title>Tasty Bite Restaurant</title>
+    <title>MyPortfolio</title>
 
-    <style>
-        body{
-            margin: 0;
-            padding: 0;
-            font-family: sans-serif;
+    <!-- Tailwind CDN (CORRECT) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Dark mode config -->
+    <script>
+        tailwind.config = {
+            darkMode: 'class'
         }
-
-        /* <!-- HEADER SECTION --> */
-        header{
-            background: #8b0000;
-            text-align: center;
-            color: #fff;
-            padding: 15px;
-        }
-
-        /* <!-- NAV SECTION --> */
-        nav{
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-            background: #a52a29;
-            padding: 10px;
-        }
-
-        nav > a{
-            text-decoration: none;
-            color: #fff;
-        }
-
-        /* <!-- HERO SECTION --> */
-        .hero{
-            text-align: center;
-            padding: 60px 20px;
-            background: #ff6347;
-            color: #fff;
-        }
-
-        /* <!-- MAIN SECTION --> */
-        .special{
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 20px;
-            padding: 40px 20px;
-        }
-
-        .dish{
-            background: #fff8dc;
-            padding: 20px;
-            width: 220px;
-            border-radius: 8px;
-            text-align: center;
-        }
-
-        .foodpic{
-            width: 200px;
-            height: 120px;
-            border-radius: 10px;
-            border: 2px solid black;
-            margin: 5px;
-        }
-
-        /* <!-- FOOTER SECTION --> */
-        footer{
-            text-align: center;
-            background: #8b0000;
-            color: #fff;
-            padding: 15px;
-            margin-top: 20px;
-        }
-
-        /* RESPONSIVE BLOCK */
-        @media(max-width: 600px){
-            nav{
-                flex-direction: column;
-                align-items: center;
-            }
-
-            .special{
-                flex-direction: column;
-                align-items: center;
-            }
-
-            .dish{
-                width: 90%;
-            }
-
-            .foodpic{
-                width: 90%;
-                height: 90%;
-            }
-        }
-
-
-
-    </style>
-
+    </script>
 </head>
-<body>
 
-    <!-- HEADER SECTION -->
-    <header>
-        <h1>Tasty Bite Restaurant</h1>
-    </header>
 
-    <!-- NAV SECTION -->
-     <nav>
-        <a href="">Home</a>
-        <a href="">Menu</a>
-        <a href="">Contact</a>
-     </nav>
 
-     <!-- HERO SECTION -->
-      <div class="hero">
-        <h2>Delicious Food Delivered Fresh</h2>
-        <p>. Italian Food . Indian Food . Chinese Food</p>
-      </div>
 
-      <!-- MAIN SECTION -->
-       <section class="special">
+<body class="bg-white dark:bg-gray-900 dark:text-white transition-colors duration-300">
 
-        <div class="dish">
-            <img class="foodpic" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRAx4gXqtonxIIvOoDUlkz2O7N8zFKbIjsj_Q&s" alt="Pizza">
-            <h3>Pizza</h3>
-            <p>Cheesy and Fresh</p>
+    <!-- NAVBAR -->
+    <nav class="bg-white dark:bg-gray-800 w-full shadow-md fixed top-0 left-0 right-0 z-0">
+        <div class="container mx-auto flex justify-between items-center py-4 px-3">
+
+            <img class="items-center w-40 dark:text-white dark:bg-gray-800" src="muportlogi.png" alt="">
+            <!-- <h2 class="text-xl font-bold">MyPortfolio</h2> -->
+
+            <!-- Desktop Menu -->
+            <div class="hidden md:flex gap-6">
+                <a href="#about"   class="font-medium text-black dark:text-white font-serif">About</a>
+                <a href="#skill"   class="font-medium text-black dark:text-white font-serif">Skill</a>
+                <a href="#project" class="font-medium text-black dark:text-white font-serif">Projects</a>
+                <a href="#contact" class="font-medium text-black dark:text-white font-serif">Contact</a>
+            </div>
+
+            <!-- Buttons -->
+            <div class="flex items-center gap-3">
+
+                <!-- Dark Mode Button -->
+                <button
+                    id="darkToggle"
+                    class="border px-2 py-1 rounded-md text-xl
+                           bg-white text-black
+                           dark:bg-gray-700 dark:text-white
+                           transition">
+                    🌙
+                </button>
+
+                <!-- Hamburger -->
+                <button id="hamburger" class="md:hidden text-2xl">
+                    ☰
+                </button>
+
+            </div>
+
         </div>
+    </nav>
 
-        <div class="dish">
-            <img class="foodpic" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQGrbdqkal9DYzKRvLm9TUihH5WDwW5flkDfg&s" alt="Burger">
-            <h3>Burger</h3>
-            <p>Juicy and Testy</p>
-        </div>
+    <!-- MOBILE MENU -->
+    <div id="mobileMenu"   class="md:hidden hidden bg-white dark:bg-gray-800 shadow-md mt-20">
+        <a href="#about"   class="block p-3 border-b dark:border-gray-700 font-serif">About</a>
+        <a href="#skill"   class="block p-3 border-b dark:border-gray-700 font-serif">Skill</a>
+        <a href="#project" class="block p-3 border-b dark:border-gray-700 font-serif">Projects</a>
+        <a href="#contact" class="block p-3 border-b dark:border-gray-700 font-serif ">Contact</a>
+    </div>
 
-        <div class="dish">
-            <img class="foodpic" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSnn4GQz1ZYVPr3XRMdOeHaC87-Cbm1BnPV9sSqJfwBaQ&s" alt="Pasta">
-            <h3>Pasta</h3>
-            <p>Authentic Italian</p>
-        </div>
 
-       </section>
+    <!-- MAIN CONTENT -->
 
-       <section class="special">
 
-        <div class="dish">
-            <img class="foodpic" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSnn4GQz1ZYVPr3XRMdOeHaC87-Cbm1BnPV9sSqJfwBaQ&s" alt="Sandwich">
-            <h3>Sandwich</h3>
-            <p>Fresh & grilled</p>
-        </div>
+    <!-- ABOUT SECTION  -->
 
-        <div class="dish">
-            <img class="foodpic" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSBLv7WArNGBTs5fvBBEksJ0XGjzzsCikfx8w&s" alt="French Fries">
-            <h3>French Fries</h3>
-            <p>Crispy potato sticks</p>
-        </div>
+    <section
+  id="about"
+  class="text-center px-4
+         bg-gray-50 dark:bg-gray-800 dark:text-white
+         bg-cover bg-center mt-20 mb-8"
+  style="background-image: url('f09f6dcf-3c9e-4ede-b9e4-d5ce5eae7b7b.png');"
+>
+  <div class="container mx-auto flex flex-col-reverse md:flex-row items-center justify-between gap-20">
 
-        <div class="dish">
-            <img class="foodpic" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTbQcWDlkKPMPRkERqnMjJeEqRbFzfYHNnBIVZVnSzaRg&s" alt="Roll">
-            <h3>Roll</h3>
-            <p>Stuffed & wrapped</p>
-        </div>
+    <!-- Image -->
+    <div class="w-full md:w-1/2 flex justify-center">
+      <img 
+        src="sevakimgg.png"
+        alt="Sevak Patel"
+        class="w-48 sm:w-60 md:w-72 lg:w-80 rounded-xl object-cover items-end"
+      >
+    </div>
 
-       </section>
+    <!-- Text Content -->
+    <div class="w-full md:w-1/2 text-center md:text-left dark:text-black ">
+      <h1 class="font-bold text-3xl sm:text-4xl lg:text-5xl mb-4">
+        Hi, I'm Sevak Patel
+      </h1>
 
-       <section class="special">
+      <p class="font-medium text-sm sm:text-base lg:text-lg mb-6">
+        Frontend → Backend Developer | Full Stack Enthusiast | Software Engineer  
+        <br class="hidden sm:block">
+        Problem Solver | System Designer
+      </p>
 
-        <div class="dish">
-            <img class="foodpic" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRUAzDdNR32jR4qfFIjpuATDRWVfFH3JnwLGA&s" alt="Tacos">
-            <h3>Tacos</h3>
-            <p>Mexican street bite</p>
-        </div>
+      <a
+        href="#"
+        class="inline-block px-6 py-3
+               bg-black text-white  dark:bg-white dark:text-black dark:border-2 dark:border-black rounded-lg font-medium hover:scale-105 transition"
+      >
+        Download Resume
+      </a>
+    </div>
 
-        <div class="dish">
-            <img class="foodpic" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTjduWHfRQGPncAlhTBEQeS5YzJL_aTXovVNQ&s" alt="Fried Chicken">
-            <h3>Fried Chicken</h3>
-            <p>Crunchy outside, juicy inside</p>
-        </div>
+  </div>
+</section>
 
-        <div class="dish">
-            <img class="foodpic" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRy6yUrfph6HZkkfwWwvFocczlDyCZuB82B0g&s" alt="Noodles">
-            <h3>Noodles</h3>
-            <p>Street style flavor</p>
-        </div>
+            <!-- SKILL SECTION -->
 
-       </section>
+            <section id="skill" class="   shadow px-4 m-8 ">
 
-       <!-- FOOTER SECTION -->
-        <footer>
-            &copy; 2024 Tasty Bite Restaurant. All rights reserved | Contact - 7488426912.
-        </footer>
+                <h1 class="text-2xl font-bold mb-4 p-4 dark:text-white text-center">Skills</h1>
+
+                <div class="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 text-center p-8 ">
+
+                    <div class=" border-2 border-black dark:border-2
+                    dark:border-white rounded-3xl p-4 font-bold dark:hover:bg-amber-300 cursor-pointer"> HTML</div>
+
+                    <div class=" border-2 border-black dark:border-2
+                    dark:border-white rounded-3xl p-4 font-bold dark:hover:bg-amber-300 cursor-pointer">CSS</div>
+
+                    <div class=" border-2 border-black dark:border-2
+                    dark:border-white rounded-3xl p-4 font-bold dark:hover:bg-amber-300 cursor-pointer">JavaScript</div>
+
+                    <div class=" border-2 border-black dark:border-2
+                    dark:border-white rounded-3xl p-4 font-bold dark:hover:bg-amber-300 cursor-pointer">React</div>
+
+                    <div class=" border-2 border-black dark:border-2
+                    dark:border-white rounded-3xl p-4 font-bold dark:hover:bg-amber-300 cursor-pointer">Node.js</div>
+
+                    <div class=" border-2 border-black dark:border-2
+                    dark:border-white rounded-3xl p-4 font-bold dark:hover:bg-amber-300 cursor-pointer">MongoDB</div>
+
+                    <div class=" border-2 border-black dark:border-2
+                    dark:border-white rounded-3xl p-4 font-bold dark:hover:bg-amber-300 cursor-pointer">Express</div>
+
+                    <div class=" border-2 border-black dark:border-2
+                    dark:border-white rounded-3xl p-4 font-bold dark:hover:bg-amber-300 cursor-pointer">Tailwind CSS</div>
+
+                </div>
+
+            </section>
+
+
+            <!-- PROJECT SECTION -->
+
+            <section>
+                <h1 class="text-2xl font-bold mb-4 p-4 dark:text-white text-center">Projects</h1>
+
+                <div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+            </section>
+ 
+
+
+
+
+
+
+
+
+
+    <!-- JS -->
+    <script>
+        // Hamburger Menu
+        const hamburger = document.getElementById("hamburger");
+        const mobileMenu = document.getElementById("mobileMenu");
+
+        hamburger.addEventListener("click", () => {
+            mobileMenu.classList.toggle("hidden");
+        });
+
+        // Dark Mode Toggle
+        const darkToggle = document.getElementById("darkToggle");
+        const html = document.documentElement;
+
+        // Page load par check
+        if (localStorage.theme === "dark") {
+            html.classList.add("dark");
+            darkToggle.textContent = "☀️";
+        }
+
+        darkToggle.addEventListener("click", () => {
+            html.classList.toggle("dark");
+
+            const isDark = html.classList.contains("dark");
+            darkToggle.textContent = isDark ? "☀️" : "🌙";
+            localStorage.theme = isDark ? "dark" : "light";
+        });
+    </script>
+
 </body>
 </html>
